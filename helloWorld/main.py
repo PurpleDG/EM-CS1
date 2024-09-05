@@ -1,4 +1,3 @@
 #Evan McCabe
 
-print("ms larose is testing this")
-print("I'm confused.")
+print("I fugured it out at last, hurray!")
