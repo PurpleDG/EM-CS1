@@ -3,10 +3,15 @@
 print("\nHello, I am the number formatter.")
 
 def formatNum():
-    txt0 = "{:,} "
-    num = input("What number would you like formatted? ")
-    print("\nHere it is, formatted:")
-    print(txt0.format(num))
-    
+    num = int(input("What number would you like formatted? "))
+    print("Here it is, formatted:\n")
+    f1 = f"{num:,}"
+    print(f1)
+    f2 = f"{num:.4f}"
+    print(f2)
+    f3 = f"{num:.0%}"
+    print(f3)
+    f4 = f"{num:.2f}"
+    print("$" + f4 + "\n")
 
 formatNum()
