@@ -5,51 +5,24 @@ print("-include at least 1 number\n-include at least 1 special character")
 
 secure = False
 
-cheese = [""]
-s = "please work"
-cheese.append(s.find("p"))
-print(cheese)
-
 while secure == False:
+    includesSpecial = False
+    includesNumber = False
     password = input("\nInput your new password:\n")
-    specialCharacters = [""]
-    characterCheck = [""]
-    specialCharacters.append(password.find("`"))
-    specialCharacters.append(password.find("~"))
-    specialCharacters.append(password.find("!"))
-    specialCharacters.append(password.find("@"))
-    specialCharacters.append(password.find("#"))
-    specialCharacters.append(password.find("$"))
-    specialCharacters.append(password.find("%"))
-    specialCharacters.append(password.find("^"))
-    specialCharacters.append(password.find("&"))
-    specialCharacters.append(password.find("*"))
-    specialCharacters.append(password.find("("))
-    specialCharacters.append(password.find(")"))
-    specialCharacters.append(password.find("-"))
-    specialCharacters.append(password.find("_"))
-    specialCharacters.append(password.find("="))
-    specialCharacters.append(password.find("+"))
-    specialCharacters.append(password.find("["))
-    specialCharacters.append(password.find("{"))
-    specialCharacters.append(password.find("]"))
-    specialCharacters.append(password.find("}"))
-    specialCharacters.append(password.find("\\"))
-    specialCharacters.append(password.find("|"))
-    specialCharacters.append(password.find(";"))
-    specialCharacters.append(password.find(":"))
-    specialCharacters.append(password.find("'"))
-    specialCharacters.append(password.find('"'))
-    specialCharacters.append(password.find(","))
-    specialCharacters.append(password.find("<"))
-    specialCharacters.append(password.find("."))
-    specialCharacters.append(password.find(">"))
-    specialCharacters.append(password.find("/"))
-    specialCharacters.append(password.find("?"))
-    specialCharacters.append(password.find("/"))
-    if specialCharacters == characterCheck:
+    specialCharacters = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "\\", "|", ";", ":", "'", '"', ",", "<", ".", ">", "/", "?"]
+    for i in specialCharacters:
+        if i in password:
+            includesSpecial = True
+    numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    for i in numbers:
+        if i in password:
+            includesNumber = True
+    if includesNumber == False:
+        print("\nPLEASE INCLUDE A NUMBER\nPlease try again.")
+    elif includesSpecial == False:
         print("\nPLEASE INCLUDE A SPECIAL CHARACTER\nPlease try again.")
     elif len(password) < 8:
         print("\nTOO SHORT\nPlease try again.")
-    elif str.isalpha(password):
-        print("\nPLEASE INCLUDE A NUMBER\nPlease try again.")
+    else:
+        print("\nPassword set.\n")
+        secure = True
