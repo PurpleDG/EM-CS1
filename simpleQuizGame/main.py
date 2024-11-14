@@ -97,22 +97,52 @@ else:
 if correct == False:
     answer = input("Question 4.\nHas Vampire Weekend ever gone on tour?\nA. No\nB. Yes\n")
     if answer.lower() == "a":
-        print("\nWRONG\ncorrect answer: D\n")
+        print("\nWRONG\ncorrect answer: B\n")
+        correct = False
+    elif answer.lower() == "b":
+        print("\nCORRECT\n")
+        correct = True
+        score += 1
+    else:
+        print("\nINVALID INPUT\nNext question. :/\n")
+else:
+    answer = input("Question 4.\nWhat album is Diplomat's Son a part of?\nA. Contra\nB. Modern Vampires of the City\nC. Father of the Bride\nD. Only God Was Above Us\n")
+    if answer.lower() == "b":
+        print("\nWRONG\ncorrect answer: A\n")
+        correct = False
+    elif answer.lower() == "a":
+        print("\nCORRECT\n")
+        correct = True
+        score += 1
+    elif answer.lower() == "c":
+        print("\nWRONG\ncorrect answer: A\n")
         correct = False
     elif answer.lower() == "d":
+        print("\nWRONG\ncorrect answer: A\n")
+        correct = False
+    else:
+        print("\nINVALID INPUT\nNext question. :/\n")
+
+#Question 5
+if correct == False:
+    answer = input("Question 5.\nWhat song by Vampire weekend includes the line:\n'I don't want to live like this, but I don't want to die.'\nA. Ya Hey\nB. A-Punk\nC. Harmony Hall\nD. Prep School Gangsters\n")
+    if answer.lower() == "a":
+        print("\nWRONG\ncorrect answer: C\n")
+        correct = False
+    elif answer.lower() == "c":
         print("\nCORRECT\n")
         correct = True
         score += 1
     elif answer.lower() == "b":
-        print("\nWRONG\ncorrect answer: D\n")
+        print("\nWRONG\ncorrect answer: C\n")
         correct = False
-    elif answer.lower() == "c":
-        print("\nWRONG\ncorrect answer: D\n")
+    elif answer.lower() == "d":
+        print("\nWRONG\ncorrect answer: C\n")
         correct = False
     else:
-        print("\nINVALID INPUT\nNext question. :/\n")
+        print("\nINVALID INPUT\n :/\n")
 else:
-    answer = input("Question 4.\nWhat city is the main singer of Vampire Weekend, Ezra Koenig, from?\nA. Washington D.C.\nB. Provo\nC. New York City\nD. Bronxville\n")
+    answer = input("Question 5.\nVampire weekend used to have 4 members.\nWhat year did Rostam Batmanglij leave the band?\nA. 2008\nB. 2012\nC. 2016\nD. 2020\n")
     if answer.lower() == "b":
         print("\nWRONG\ncorrect answer: C\n")
         correct = False
@@ -127,9 +157,6 @@ else:
         print("\nWRONG\ncorrect answer: C\n")
         correct = False
     else:
-        print("\nINVALID INPUT\nNext question. :/\n")
-
-
-
+        print("\nINVALID INPUT\n :/\n")
 
 print("Congrats, you finished! Your score was " + str(score) + "/5. (:\n")
