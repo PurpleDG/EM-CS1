@@ -15,7 +15,7 @@ board3 = ["¯", "¯", "¯"]
 print("\nHello, welcome to Tic-Tac-Toe!")
 
 def printBoard():
-    print(" " + board1[0] + " | " + board1[1] + " | " + board1[2] + "¯")
+    print("\n " + board1[0] + " | " + board1[1] + " | " + board1[2] + " ")
     print("¯" + board2[0] + "¯|¯" + board2[1] + "¯|¯" + board2[2] + "¯")
     print("¯" + board3[0] + "¯|¯" + board3[1] + "¯|¯" + board3[2] + "¯")
 
@@ -72,8 +72,100 @@ def checkEnd():
         playing = False
     
 def playerTurn():
-    choice = input("\nWhere would you like to place a tile")
+    global turn
+    choice = input("\n 1 | 2 | 3 \n¯4¯|¯5¯|¯6¯\n¯7¯|¯8¯|¯9¯\nWhere would you like to place a tile?\n")
+    if choice == "1" and board1[0] == " ":
+        board1[0] = "O"
+        printBoard()
+        checkEnd()
+    elif choice == "2" and board1[1] == " ":
+        board1[1] = "O"
+        printBoard()
+        checkEnd()
+    elif choice == "3" and board1[2] == " ":
+        board1[2] = "O"
+        printBoard()
+        checkEnd()
+    elif choice == "4" and board2[0] == "¯":
+        board2[0] = "O̅"
+        printBoard()
+        checkEnd()
+    elif choice == "5" and board2[1] == "¯":
+        board2[1] = "O̅"
+        printBoard()
+        checkEnd()
+    elif choice == "6" and board2[2] == "¯":
+        board2[2] = "O̅"
+        printBoard()
+        checkEnd()
+    elif choice == "7" and board3[0] == "¯":
+        board3[0] = "O̅"
+        printBoard()
+        checkEnd()
+    elif choice == "8" and board3[1] == "¯":
+        board3[1] = "O̅"
+        printBoard()
+        checkEnd()
+    elif choice == "9" and board3[2] == "¯":
+        board3[2] = "O̅"
+        printBoard()
+        checkEnd()
+    else:
+        print("\nInvalid choice.")
+        playerTurn()
+    turn = "computer"
+
+def computerTurn():
+    global turn
+    options = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    comChoice = random.choice(options)
+    if comChoice == "1" and board1[0] == " ":
+        board1[0] = "X"
+        printBoard()
+        checkEnd()
+    elif comChoice == "2" and board1[1] == " ":
+        board1[1] = "X"
+        printBoard()
+        checkEnd()
+    elif comChoice == "3" and board1[2] == " ":
+        board1[2] = "X"
+        printBoard()
+        checkEnd()
+    elif comChoice == "4" and board2[0] == "¯":
+        board2[0] = "X̅"
+        printBoard()
+        checkEnd()
+    elif comChoice == "5" and board2[1] == "¯":
+        board2[1] = "X̅"
+        printBoard()
+        checkEnd()
+    elif comChoice == "6" and board2[2] == "¯":
+        board2[2] = "X̅"
+        printBoard()
+        checkEnd()
+    elif comChoice == "7" and board3[0] == "¯":
+        board3[0] = "X̅"
+        printBoard()
+        checkEnd()
+    elif comChoice == "8" and board3[1] == "¯":
+        board3[1] = "X̅"
+        printBoard()
+        checkEnd()
+    elif comChoice == "9" and board3[2] == "¯":
+        board3[2] = "X̅"
+        printBoard()
+        checkEnd()
+    else:
+        computerTurn()
+    turn = "player"
 
 while playing == True:
     while turn == "player":
         playerTurn()
+    while turn == "computer":
+        computerTurn()
+
+if win == False:
+    print("\nGAME OVER\nYou lost. :/\n")
+else:
+    print("\nGAME OVER\nYou won! XD\n")
