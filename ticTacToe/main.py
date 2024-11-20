@@ -15,9 +15,14 @@ board3 = ["¯", "¯", "¯"]
 print("\nHello, welcome to Tic-Tac-Toe!")
 
 def printBoard():
-    print("\n " + board1[0] + " | " + board1[1] + " | " + board1[2] + " ")
-    print("¯" + board2[0] + "¯|¯" + board2[1] + "¯|¯" + board2[2] + "¯")
-    print("¯" + board3[0] + "¯|¯" + board3[1] + "¯|¯" + board3[2] + "¯")
+#    print("\n " + board1[0] + " | " + board1[1] + " | " + board1[2] + " ")
+#    print("¯" + board2[0] + "¯|¯" + board2[1] + "¯|¯" + board2[2] + "¯")
+#    print("¯" + board3[0] + "¯|¯" + board3[1] + "¯|¯" + board3[2] + "¯")
+    boardList = [board1, board2, board3]
+    for list in boardList:
+        for item in list:
+            print(item, "¯|¯", end="")
+        print("\n")
 
 def checkEnd():
     global playing
