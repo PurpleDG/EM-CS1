@@ -1,13 +1,13 @@
 #Evan McCabe SkillPractice: Counr up and down
 
 def countDown():
-    a = 20
-    for i in range(20):
+    a = 19
+    for i in range(19):
         print(a)
         a -= 1
 
 for i in range(20):
-    print(i)
+    print(i + 1)
     i -= 1
     if i == 18:
         countDown()
