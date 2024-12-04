@@ -3,6 +3,7 @@
 print("\nHello! I am a simple calculator.")
 
 def askNum():
+    global num1
     try:
         num1 = int(input("\nWhat is the first number in the equation?\n"))
     except:
@@ -10,6 +11,7 @@ def askNum():
         askNum()
 
 def askNum2():
+    global num2
     try:
         num2 = int(input("\nWhat is the second number in the equation?\n"))
     except:
@@ -37,7 +39,18 @@ def calculate():
         askNum2()
 
     if operation == "1":
-        print("\n" + num1 + " + " + num2 + " = ")
+        ans = num1 + num2
+        print("\n" + str(num1) + " + " + str(num2) + " = " + str(ans))
+    if operation == "2":
+        ans = num1 - num2
+        print("\n" + str(num1) + " - " + str(num2) + " = " + str(ans))
+    if operation == "3":
+        ans = num1 * num2
+        print("\n" + str(num1) + " x " + str(num2) + " = " + str(ans))
+    if operation == "4":
+        ans = num1 / num2
+        print("\n" + str(num1) + " ÷ " + str(num2) + " = " + str(ans))
+
+    print("\nThere you go!\n")
 
 calculate()
-    
