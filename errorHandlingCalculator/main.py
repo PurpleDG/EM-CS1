@@ -48,8 +48,12 @@ def calculate():
         ans = num1 * num2
         print("\n" + str(num1) + " x " + str(num2) + " = " + str(ans))
     if operation == "4":
-        ans = num1 / num2
-        print("\n" + str(num1) + " ÷ " + str(num2) + " = " + str(ans))
+        if num1 == 0 or num2 == 0:
+            print("\nYou can't divid by zero!\n")
+            calculate()
+        else:
+            ans = num1 / num2
+            print("\n" + str(num1) + " ÷ " + str(num2) + " = " + str(ans))
 
     print("\nThere you go!\n")
 
