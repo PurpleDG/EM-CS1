@@ -3,9 +3,9 @@
 import random
 
 origamiConstructStats = {
-    "health": 10,
-    "attack": 20,
-    "defense": 4
+    "health": 15,
+    "attack": 40,
+    "defense": 2
 }
 
 ghostyStats = {
@@ -16,19 +16,19 @@ ghostyStats = {
 
 dustBunniesStats = {
     "health": 15,
-    "attack": 5,
-    "defense": 2
+    "attack": 35,
+    "defense": 5
 }
 
 cactusManStats = {
     "health": 20,
-    "attack": 20,
+    "attack": 45,
     "defense": 5
 }
 
 shoutyBeetStats = {
-    "health": 5,
-    "attack": 25,
+    "health": 11,
+    "attack": 35,
     "defense": 0
 }
 
@@ -40,7 +40,7 @@ seaMonsterStats = {
 
 starKingStats = {
     "health": 150,
-    "attack": 20,
+    "attack": 50,
     "defense": 9
 }
 
@@ -72,11 +72,11 @@ visitedRooms = []
 def runGame():
 
     attackInventory = {
-    "Apple": 20
+    
     }
 
     healthInventory = {
-        "Example": 10
+        
     }
 
     health = 150
