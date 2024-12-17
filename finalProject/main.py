@@ -229,7 +229,7 @@ def paperRoom():
         takeItem = input("\nYou find a ginormous pair of scissors. Would you like to pick it up? (y = yes, n = no)\n")
         if takeItem == "y":
             attackInventory.update({"Scissors": 45})
-            print("\nYou pick up the pen. (combat, 45)")
+            print("\nYou pick up the scissors. (combat, 45)")
                  
         visitedRooms.append("Paper Room")
 
