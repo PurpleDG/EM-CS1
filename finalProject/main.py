@@ -34,7 +34,7 @@ shoutyBeetStats = {
 
 seaMonsterStats = {
     "health": 35,
-    "attack": 7,
+    "attack": 40,
     "defense": 7
 }
 
@@ -249,7 +249,6 @@ def cafeteria():
     global attackInventory
     global healthInventory
     global health
-    global attack
     global defense
     global visitedRooms    
 
@@ -327,7 +326,7 @@ def ghostyRoom():
     else:
         cafeteria()
 
-#DONE
+#COMPLETE
 def dustRoom():
     global attackInventory
     global healthInventory
@@ -514,8 +513,7 @@ def starKingRoom():
 
     combat("Star King")
 
-    print("\nYou did it.\n\nYou wake up in a cold sweat. It's sunrise, and the first sweet drop of sunlight has just hit your eyes through the window.")
-    print("Oh. It was just a dream, then? No... No. It wasn't. It was far too real to be a dream. How did it happen? Maybe you'll never know. But it happened.")
+    print("\nYou did it.\n\nYou wake up in a cold sweat. It's sunrise, and the first sweet drop of sunlight has just hit your eyes through the window.\nOh. It was just a dream, then? No... No. It wasn't. It was far too real to be a dream. How did it happen? Maybe you'll never know. But it happened.")
 
     playAgain = ("\n...\n\nPlay again? (y = yes, n = no)\n")
     if playAgain == "y":
